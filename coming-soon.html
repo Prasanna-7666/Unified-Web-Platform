@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Unified Platform</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-dark text-white d-flex align-items-center justify-content-center"
+    style="min-height: 100vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placehold.co/1920x1080/212529/ffffff?text=Background'); background-size: cover; background-position: center;">
+
+    <div class="container text-center">
+        <h1 class="display-3 fw-bold mb-4">We Are Launching Soon</h1>
+        <p class="lead mb-5">Our website is currently under construction. We'll be here soon with our new awesome site.
+        </p>
+
+        <div class="row justify-content-center mb-5" id="countdown">
+            <div class="col-6 col-md-2 mb-3">
+                <div class="p-3 bg-primary rounded">
+                    <h2 class="fw-bold mb-0" id="days">00</h2>
+                    <small>Days</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <div class="p-3 bg-primary rounded">
+                    <h2 class="fw-bold mb-0" id="hours">00</h2>
+                    <small>Hours</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <div class="p-3 bg-primary rounded">
+                    <h2 class="fw-bold mb-0" id="minutes">00</h2>
+                    <small>Minutes</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <div class="p-3 bg-primary rounded">
+                    <h2 class="fw-bold mb-0" id="seconds">00</h2>
+                    <small>Seconds</small>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn btn-outline-light btn-lg px-4">Back to Home</a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple Countdown Timer
+        const countDate = new Date().getTime() + (10 * 24 * 60 * 60 * 1000); // 10 days from now
+
+        const interval = setInterval(function () {
+            const now = new Date().getTime();
+            const gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const d = Math.floor(gap / (day));
+            const h = Math.floor((gap % (day)) / (hour));
+            const m = Math.floor((gap % (hour)) / (minute));
+            const s = Math.floor((gap % (minute)) / second);
+
+            document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+
+            if (gap < 0) {
+                clearInterval(interval);
+                document.getElementById('countdown').innerHTML = '<h2>We Have Launched!</h2>';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
