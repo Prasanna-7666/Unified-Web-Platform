@@ -582,6 +582,48 @@ footer hr {
   }
 }
 
+/* Step Card & Number */
+.step-card {
+  position: relative;
+  overflow: visible !important;
+  margin-top: 15px;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(114, 9, 183, 0.3);
+}
+
+.feature-benefit-card {
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: all 0.3s ease;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.feature-benefit-card:hover {
+  background: var(--hero-overlay-light);
+  transform: translateY(-5px);
+}
+
+.bg-light-custom {
+  background-color: var(--bg-light);
+}
+
 /* Typography Overrides */
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
