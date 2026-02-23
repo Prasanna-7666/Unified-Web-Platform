@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Unified Platform E-commerce</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===== Header Start ===== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-layers-fill me-2"></i>Unified<span>Platform</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home-2.html">Home 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative me-3" href="cart.html">
+                                <i class="bi bi-cart3 fs-5"></i>
+                                <span class="cart-badge badge rounded-pill bg-primary">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary me-2" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <div class="theme-switch-wrapper">
+                                <label class="theme-switch" for="checkbox">
+                                    <input type="checkbox" id="checkbox" />
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ===== Header End ===== -->
+
+    <!-- ===== Page Header Start ===== -->
+    <section class="page-header-bg text-center">
+        <div class="container pt-5">
+            <h1 class="fw-bold">Mystical Shop</h1>
+            <p class="mx-auto text-muted mt-3" style="max-width: 750px;">
+                Explore our curated collection of spiritual tools and celestial guides.
+                From healing crystals to professional tarot decks, find everything you need for your cosmic journey.
+            </p>
+        </div>
+    </section>
+    <!-- ===== Page Header End ===== -->
+
+    <!-- ===== Shop Section Start ===== -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <!-- Sidebar Filters -->
+                <div class="col-lg-3">
+                    <div class="card border-0 shadow-sm p-4 rounded-4 mb-4">
+                        <h5 class="fw-bold mb-3">Categories</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted active">All Products</a>
+                            </li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Crystals & Stones</a>
+                            </li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Tarot & Oracle</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Zodiac Decor</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Astra Guides</a></li>
+                        </ul>
+                    </div>
+                    <div class="card border-0 shadow-sm p-4 rounded-4">
+                        <h5 class="fw-bold mb-3">Price Range</h5>
+                        <input type="range" class="form-range" id="priceRange" min="0" max="100" step="10">
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>$0</span>
+                            <span>$100+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        <!-- Product 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/7209b7/ffffff?text=Healing+Crystals"
+                                    class="card-img-top" alt="Healing Crystals">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary-subtle text-primary small">Crystals</span>
+                                        <h5 class="fw-bold text-primary mb-0">$29.99</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Essential Healing Set</h5>
+                                    <p class="text-muted small mb-4">A curated set of 7 balanced crystals for meditation
+                                        and energy work.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD001"
+                                        data-name="Essential Healing Set" data-price="29.99"
+                                        data-image="https://placehold.co/400x400/7209b7/ffffff?text=Healing+Crystals">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/f72585/ffffff?text=Tarot+Deck"
+                                    class="card-img-top" alt="Tarot Deck">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary-subtle text-secondary small">Tarot</span>
+                                        <h5 class="fw-bold text-secondary mb-0">$19.50</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Celestial Tarot Deck</h5>
+                                    <p class="text-muted small mb-4">78-card deck with gold-foil edges and a detailed
+                                        guidebook.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD002"
+                                        data-name="Celestial Tarot Deck" data-price="19.50"
+                                        data-image="https://placehold.co/400x400/f72585/ffffff?text=Tarot+Deck">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/4cc9f0/ffffff?text=Zodiac+Candle"
+                                    class="card-img-top" alt="Zodiac Candle">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-info-subtle text-info small">Decor</span>
+                                        <h5 class="fw-bold text-info mb-0">$15.00</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Hand-poured Zodiac Candle</h5>
+                                    <p class="text-muted small mb-4">Soy wax candle infused with scents tailored to your
+                                        zodiac sign.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD003"
+                                        data-name="Zodiac Candle" data-price="15.00"
+                                        data-image="https://placehold.co/400x400/4cc9f0/ffffff?text=Zodiac+Candle">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/4361ee/ffffff?text=Birth+Chart"
+                                    class="card-img-top" alt="Birth Chart">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary-subtle text-primary small">Guides</span>
+                                        <h5 class="fw-bold text-primary mb-0">$45.00</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Personalized Birth Chart</h5>
+                                    <p class="text-muted small mb-4">A deep-dive analysis of your cosmic blueprint and
+                                        life path.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD004"
+                                        data-name="Personalized Birth Chart" data-price="45.00"
+                                        data-image="https://placehold.co/400x400/4361ee/ffffff?text=Birth+Chart">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/3a0ca3/ffffff?text=Moon+Lamp"
+                                    class="card-img-top" alt="Moon Lamp">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary-subtle text-primary small">Decor</span>
+                                        <h5 class="fw-bold text-primary mb-0">$34.99</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Mystical Moon Lamp</h5>
+                                    <p class="text-muted small mb-4">3D printed moon lamp with adjustable brightness and
+                                        colors.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD005"
+                                        data-name="Mystical Moon Lamp" data-price="34.99"
+                                        data-image="https://placehold.co/400x400/3a0ca3/ffffff?text=Moon+Lamp">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/b5179e/ffffff?text=Smudge+Kit"
+                                    class="card-img-top" alt="Smudge Kit">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary-subtle text-secondary small">Rituals</span>
+                                        <h5 class="fw-bold text-secondary mb-0">$12.99</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Sacred Herbs Smudge Kit</h5>
+                                    <p class="text-muted small mb-4">White sage, palo santo, and an abalone shell for
+                                        ritual cleansing.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD006"
+                                        data-name="Sacred Herbs Smudge Kit" data-price="12.99"
+                                        data-image="https://placehold.co/400x400/b5179e/ffffff?text=Smudge+Kit">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/7209b7/ffffff?text=Golden+Tarot"
+                                    class="card-img-top" alt="Golden Tarot Deck">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary-subtle text-secondary small">Tarot</span>
+                                        <h5 class="fw-bold text-secondary mb-0">$35.00</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Golden Path Tarot (Artisan)</h5>
+                                    <p class="text-muted small mb-4">Premium linen finish with gold-foil illustrations
+                                        by local artists.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD007"
+                                        data-name="Golden Path Tarot" data-price="35.00"
+                                        data-image="https://placehold.co/400x400/7209b7/ffffff?text=Golden+Tarot">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/560bad/ffffff?text=Zodiac+Jewelry"
+                                    class="card-img-top" alt="Zodiac Jewelry">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-info-subtle text-info small">Jewelry</span>
+                                        <h5 class="fw-bold text-info mb-0">$28.99</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Amethyst Nebula Necklace</h5>
+                                    <p class="text-muted small mb-4">Sterling silver chain featuring a deep purple
+                                        nebula amethyst stone.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD008"
+                                        data-name="Amethyst Necklace" data-price="28.99"
+                                        data-image="https://placehold.co/400x400/560bad/ffffff?text=Zodiac+Jewelry">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/480ca8/ffffff?text=Crystals" class="card-img-top"
+                                    alt="Healing Crystals">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary-subtle text-primary small">Crystals</span>
+                                        <h5 class="fw-bold text-primary mb-0">$22.00</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Serenity Crystal Set</h5>
+                                    <p class="text-muted small mb-4">A curated collection of Amethyst, Rose Quartz, and
+                                        Clear Quartz.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD009"
+                                        data-name="Serenity Crystal Set" data-price="22.00"
+                                        data-image="https://placehold.co/400x400/480ca8/ffffff?text=Crystals">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 10 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/3f37c9/ffffff?text=Aura+Mist"
+                                    class="card-img-top" alt="Aura Mist">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-info-subtle text-info small">Self-Care</span>
+                                        <h5 class="fw-bold text-info mb-0">$18.50</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Etheric Calm Aura Mist</h5>
+                                    <p class="text-muted small mb-4">Essential oil blend designed to cleanse your
+                                        energetic field.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD010"
+                                        data-name="Etheric Aura Mist" data-price="18.50"
+                                        data-image="https://placehold.co/400x400/3f37c9/ffffff?text=Aura+Mist">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 11 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/4361ee/ffffff?text=Ritual+Mat"
+                                    class="card-img-top" alt="Ritual Mat">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary-subtle text-primary small">Rituals</span>
+                                        <h5 class="fw-bold text-primary mb-0">$55.00</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Stellar Alignment Ritual Mat</h5>
+                                    <p class="text-muted small mb-4">Eco-friendly cork mat with constellation alignment
+                                        markers.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD011"
+                                        data-name="Stellar Ritual Mat" data-price="55.00"
+                                        data-image="https://placehold.co/400x400/4361ee/ffffff?text=Ritual+Mat">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 12 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 product-card overflow-hidden">
+                                <img src="https://placehold.co/400x400/4cc9f0/ffffff?text=Embroidery"
+                                    class="card-img-top" alt="Zodiac Embroidery">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary-subtle text-secondary small">Art</span>
+                                        <h5 class="fw-bold text-secondary mb-0">$24.00</h5>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Celestial Embroidery Kit</h5>
+                                    <p class="text-muted small mb-4">Beginner DIY kit with pre-printed zodiac patterns
+                                        and threads.</p>
+                                    <button class="btn btn-primary w-100 btn-add-to-cart" data-id="PROD012"
+                                        data-name="Zodiac Embroidery Kit" data-price="24.00"
+                                        data-image="https://placehold.co/400x400/4cc9f0/ffffff?text=Embroidery">
+                                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== Shop Section End ===== -->
+
+    <!-- ===== Footer Start ===== -->
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3 navbar-brand"><i
+                            class="bi bi-layers-fill me-2"></i>Unified<span>Platform</span></h5>
+                    <p class="text-muted">Empowering your spiritual and business journey with a unified digital
+                        ecosystem. Your source for mystical tools and celestial wisdom.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="shop.html">Shop</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#">Returns & Refunds</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Enter your email and stay updated with celestial news.</p>
+                    <form action="#" class="d-flex text-muted">
+                        <input class="form-control me-2" type="email" placeholder="Email Address">
+                        <button class="btn btn-primary" type="button">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-muted">&copy; 2026 Unified Platform. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== Footer End ===== -->
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- E-commerce JS -->
+    <script src="assets/js/ecommerce.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
