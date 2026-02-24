@@ -54,7 +54,8 @@ const CartEngine = (function () {
     const showToast = (message) => {
         // Simple toast implementation or use a library
         const toast = document.createElement('div');
-        toast.className = 'cart-toast shadow-lg';
+        toast.className = 'cart-toast shadow-lg rounded-pill px-4 py-2 text-white';
+        toast.style.background = 'var(--gradient-primary)';
         toast.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i> ${message}`;
         document.body.appendChild(toast);
 

@@ -188,6 +188,27 @@ section {
   transform: translateY(-10px);
 }
 
+.pulse-badge {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: translate(-50%, 0%) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(114, 9, 183, 0.7);
+  }
+
+  70% {
+    transform: translate(-50%, 0%) scale(1);
+    box-shadow: 0 0 0 10px rgba(114, 9, 183, 0);
+  }
+
+  100% {
+    transform: translate(-50%, 0%) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(114, 9, 183, 0);
+  }
+}
+
 .card-title {
   color: var(--text-dark);
 }
@@ -411,6 +432,7 @@ footer hr {
 
 /* Core Values Card */
 .value-card {
+  text-align: center;
   padding: 2.5rem 2rem;
   border-radius: 20px;
   background-color: var(--card-bg);
@@ -434,7 +456,7 @@ footer hr {
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
 }
 
 /* Timeline */
@@ -587,12 +609,14 @@ footer hr {
   position: relative;
   overflow: visible !important;
   margin-top: 15px;
+  text-align: center;
 }
 
 .step-number {
   position: absolute;
   top: -15px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 35px;
   height: 35px;
   background: var(--primary);
@@ -726,4 +750,52 @@ footer hr {
 [data-theme="dark"] .border-start,
 [data-theme="dark"] .border {
   border-color: var(--border-color) !important;
+}
+
+/* Product Card Enhancements */
+.product-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.product-card .btn-add-to-cart {
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .btn-add-to-cart {
+  opacity: 1;
+  box-shadow: 0 5px 15px rgba(114, 9, 183, 0.4);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--secondary);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card .rating {
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card .author-info {
+  margin-top: auto;
+  width: 100%;
 }
